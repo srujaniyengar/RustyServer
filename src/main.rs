@@ -1,3 +1,8 @@
+// mod config;
+// pub mod utils;
+mod config;
+mod utils;
+
 fn main() {
-    println!("Hello, world!");
+    let mut config = config::getConfig().unwrap();
 }

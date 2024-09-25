@@ -1,0 +1,30 @@
+[server]
+address = "127.0.0.1"         # IP address for the server to listen on
+port = 8080                  # Port number for the server
+protocol = "https"           # Protocol to use: "http" or "https"
+log_level = "info"           # Log level: "trace", "debug", "info", "warn", "error"
+
+[tls]
+cert_path = "certs/server.crt"  # Path to the SSL/TLS certificate
+key_path = "certs/server.key"   # Path to the SSL/TLS private key
+
+[logging]
+access_log_path = "logs/access.log"  # Path to the access log file
+error_log_path = "logs/error.log"    # Path to the error log file
+
+[rate_limiting]
+requests_per_second = 100       # Maximum number of requests per second
+
+[health_check]
+interval = "30s"                # Interval between health checks
+timeout = "5s"                  # Timeout for health checks
+
+[api]
+version = "v1"                  # API version
+base_path = "/api"              # Base path for API endpoints
+
+[metrics]
+endpoint = "/metrics"           # Endpoint for metrics
+
+[service_discovery]
+discovery_url = ""              # URL for the service discovery service
